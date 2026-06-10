@@ -1,1 +1,323 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== CORES NATUREZA: VERDE, MARROM, BEGE ===== */
+:root {
+    --cor-fundo: #f5f0e1;        /* bege claro - relaxante */
+    --cor-texto: #4a3728;        /* marrom escuro */
+    --cor-destaque: #2d5a27;     /* verde escuro natureza */
+    --cor-destaque-claro: #4a7c3f; /* verde médio */
+    --cor-botao: #3b6e2e;        /* verde botão */
+    --cor-botao-hover: #5a9e4b;  /* verde mais claro */
+    --cor-card: #fffaf0;         /* bege para cards */
+    --cor-header-footer: #3b2a1f; /* marrom escuro */
+    --cor-header-texto: #f5f0e1;  /* bege claro */
+    --cor-sombra: rgba(0,0,0,0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* ===== BOTÕES DE ACESSIBILIDADE ===== */
+.botao-acessibilidade {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+    background-color: rgba(59, 42, 31, 0.85);
+    padding: 8px 12px;
+    border-radius: 40px;
+    backdrop-filter: blur(5px);
+}
+
+.botao-acessibilidade button {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+.botao-acessibilidade button:hover {
+    background-color: var(--cor-botao-hover);
+    transform: scale(1.05);
+}
+
+/* ===== MODO ALTO CONTRASTE ===== */
+.alto-contraste {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+}
+
+.alto-contraste button,
+.alto-contraste .btn-info,
+.alto-contraste .botao-acessibilidade button {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+.alto-contraste a {
+    color: #ffff00 !important;
+}
+
+.alto-contraste section {
+    background-color: #111111 !important;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background-color: var(--cor-header-footer);
+    color: var(--cor-header-texto);
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== NAVEGAÇÃO ===== */
+nav {
+    background-color: var(--cor-destaque);
+    padding: 0.8rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    text-decoration: none;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ===== SEÇÕES ===== */
+section {
+    margin-bottom: 2.5rem;
+    background-color: var(--cor-card);
+    padding: 1.8rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px var(--cor-sombra);
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+h2 {
+    color: var(--cor-destaque);
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--cor-destaque);
+    padding-left: 1rem;
+    font-size: 1.8rem;
+}
+
+article {
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/* ===== IMAGENS ===== */
+.imagem-exemplo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== INTERATIVIDADE ===== */
+.botoes-interativos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn-info {
+    background-color: var(--cor-botao);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-info:hover {
+    background-color: var(--cor-botao-hover);
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+#area-conteudo-interativo {
+    background-color: #e8e0d0;
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-top: 1rem;
+    min-height: 200px;
+}
+
+.card-interativo {
+    text-align: center;
+}
+
+.card-interativo h3 {
+    color: var(--cor-destaque);
+    margin-bottom: 1rem;
+}
+
+.card-interativo img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 10px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== GALERIA ===== */
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.card-galeria {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px var(--cor-sombra);
+    text-align: center;
+    width: 220px;
+    transition: 0.2s;
+}
+
+.card-galeria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card-galeria img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-galeria p {
+    padding: 0.8rem;
+    font-weight: bold;
+    color: var(--cor-destaque);
+}
+
+.obs-galeria {
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: #7a5a4e;
+    text-align: center;
+    padding: 0.8rem;
+    background-color: #e8e0d0;
+    border-radius: 12px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: var(--cor-header-footer);
+    color: var(--cor-header-texto);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 1.2rem;
+    }
+    
+    .botao-acessibilidade {
+        flex-direction: column;
+        bottom: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+    
+    .botoes-interativos {
+        flex-direction: column;
+    }
+    
+    .btn-info {
+        width: 100%;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
 
